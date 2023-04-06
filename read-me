@@ -1,0 +1,39 @@
+Project Name: Object Dimension Detection using RealSense Camera
+
+This project is designed to measure the dimensions of an object using a RealSense camera. The project uses OpenCV, NumPy, and pyrealsense2 libraries in Python. The RealSense camera captures the depth and color image frames of the object. The depth frame is used to calculate the dimensions of the object by selecting a region of interest (ROI), detecting edges, and then extracting contours from the ROI.
+Installation and Setup
+
+    Install the required libraries using pip:
+
+    pip install opencv-python numpy pyrealsense2
+
+    Connect the RealSense camera to your computer using a USB cable.
+
+Usage
+
+Run the code in a Python environment (e.g., Jupyter Notebook, PyCharm, etc.).
+When the program starts, it initializes the RealSense camera pipeline and waits for frames.
+Select a region of interest (ROI) by clicking and dragging your mouse cursor on the color image. The program will then calculate the dimensions of the object in the ROI.
+
+The dimensions of the object will be displayed on the color image, and the program will display the color image with edges overlayed.
+
+
+Calibration Variables
+
+The calibration variables scale_factor_x and scale_factor_y are used to convert the dimensions from pixels to millimeters. You can adjust these values based on the specific camera you are using and the dimensions of the object you are measuring.
+Mouse Callback Function
+
+The mouse_callback function is used to display the depth information when clicking on the color image. It takes five parameters:
+
+    event: The mouse event (e.g., left button down).
+    x and y: The x and y coordinates of the mouse cursor.
+    flags: Additional information about the mouse event.
+    params: A tuple of the color image, depth frame, and depth intrinsics.
+
+References
+
+    OpenCV: https://opencv.org/
+    NumPy: https://numpy.org/
+    pyrealsense2: https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python
+    
+    
